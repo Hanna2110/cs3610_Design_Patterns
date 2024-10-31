@@ -11,16 +11,16 @@ class FurnitureFactory(IFurnitureFactory):
     
     @staticmethod
     def get_furniture(furniture):
-        print("hello")
+        
         try:
             for k,v in availableFurniture.items():
                 if k in furniture.lower():
                     print(furniture.lower())
                     if k=='chair':
-                        print("1")
+                        #print("1")
                         return availableFurniture[k]().get_chair(furniture)
                     elif k=='table':
-                        print("2")
+                        #print("2")
                         return availableFurniture[k].get_table(furniture)#!!! dif.implem. for Tables -> static
                     
                         
