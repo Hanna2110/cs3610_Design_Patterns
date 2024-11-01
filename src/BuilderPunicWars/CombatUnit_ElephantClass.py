@@ -1,4 +1,4 @@
-from ICombatUnitClass import ICombatUnit
+from BuilderPunicWars.ICombatUnitClass import ICombatUnit
 
 class CombatUnit_Elephant(ICombatUnit):
     @staticmethod

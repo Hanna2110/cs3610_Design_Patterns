@@ -16,7 +16,7 @@ class IBuilber(ABC):
 
     @abstractmethod
     def buildInfantryman(self) -> None:
-        pass
+        raise NotImplementedError
     
     @abstractmethod
     def buildElephant(self) -> None:
@@ -24,4 +24,4 @@ class IBuilber(ABC):
 
     @abstractmethod
     def buildCatapult(self) -> None:
-        pass
+        raise NotImplementedError

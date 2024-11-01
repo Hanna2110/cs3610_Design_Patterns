@@ -13,7 +13,7 @@ class Army:
             #print(self.__warriors)
         elif isinstance(component, ICombatUnit):
             self.__combatUnits.append(component)
-            print(self.__combatUnits)
+            #print(self.__combatUnits)
         
     def showComponents(self) -> None:
         print(f"There is/are {len(self.__warriors)+len(self.__combatUnits)} element(s) in the {self.__name} army.")

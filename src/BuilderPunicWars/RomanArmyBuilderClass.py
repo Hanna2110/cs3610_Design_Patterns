@@ -1,16 +1,16 @@
 from BuilderPunicWars.IBuilderClass import IBuilber
 from BuilderPunicWars.ArmyClass import Army
-from BuilderPunicWars.WarriorArcherClass import WarriorArcher
+from BuilderPunicWars.WarriorInfantrymanClass import WarriorInfantryman
 from BuilderPunicWars.WarriorHorsemanClass import WarriorHorseman
-from BuilderPunicWars.CombatUnit_ElephantClass import CombatUnit_Elephant
+from BuilderPunicWars.CombatUnit_CatapultClass import CombatUnit_Catapult
 
-class CarthaginianArmyBuilder(IBuilber):
+class RomanArmyBuilder(IBuilber):
     
     def __init__(self) -> None:
         self.reset()
         
     def reset(self) -> None:
-        self.__product = Army("Carthaginian Army")
+        self.__product = Army("Roman Army")
         
     @property
     def product(self) -> None:#getResult method --> Army
@@ -19,18 +19,17 @@ class CarthaginianArmyBuilder(IBuilber):
         return currentProduct
 
     def buildArcher(self) -> None:
-        self.__product.add(WarriorArcher())
+        pass
 
     def buildHorseman(self) -> None:
         self.__product.add(WarriorHorseman())
 
     def buildElephant(self) -> None:
-        self.__product.add(CombatUnit_Elephant())
+        pass
         
     def buildInfantryman(self) -> None:
-        pass
+        self.__product.add(WarriorInfantryman())
     
     def buildCatapult(self) -> None:
-        pass
-    
+        self.__product.add(CombatUnit_Catapult())
 
