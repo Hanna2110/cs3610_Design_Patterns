@@ -1,4 +1,4 @@
-from  BuilderPunicWars.IWarriorClass import IWarrior
+from  BuilderAndPrototypePunicWars.IWarriorClass import IWarrior
 from copy import deepcopy
 
 class WarriorArcher(IWarrior):
@@ -18,12 +18,13 @@ class WarriorArcher(IWarrior):
         if memo is None:
             memo = {}
             
-        copiedField=deepcopy(self.__field)
-        newSelf=self.__class__(copiedField)
+        #copiedField=deepcopy(self.__field)
+        #newSelf=self.__class__(copiedField)
+        newSelf=self.__class__()
         newSelf.__dict__=deepcopy(self.__dict__, memo)
         return newSelf
      
     #@staticmethod
     def info(self)-> None: 
-        print(f"I am an Archer {self.__field}")
+        print(f"I am an Archer-{self.__field}")
         

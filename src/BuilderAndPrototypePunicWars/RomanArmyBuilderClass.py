@@ -2,6 +2,8 @@ from BuilderAndPrototypePunicWars.PrototypeStorageClass import PrototypeRegistry
 
 from BuilderAndPrototypePunicWars.IBuilderClass import IBuilber
 from BuilderAndPrototypePunicWars.ArmyClass import Army
+from BuilderAndPrototypePunicWars.WarriorArcherClass import WarriorArcher
+from BuilderAndPrototypePunicWars.WarriorHorsemanClass import WarriorHorseman
 
 
 '''from BuilderAndPrototypePunicWars.WarriorInfantrymanClass import WarriorInfantryman
@@ -23,17 +25,17 @@ class RomanArmyBuilder(IBuilber):
         return currentProduct
 
     def buildArcher(self) -> None:
-        pass
+        self.__product.add(PrototypeRegistry.get_prototype(WarriorArcher.__name__))
 
     def buildHorseman(self) -> None:
-        self.__product.add(WarriorHorseman())
+        self.__product.add(PrototypeRegistry.get_prototype(WarriorHorseman.__name__))
 
     def buildElephant(self) -> None:
         pass
         
     def buildInfantryman(self) -> None:
-        self.__product.add(WarriorInfantryman())
+        pass
     
     def buildCatapult(self) -> None:
-        self.__product.add(CombatUnit_Catapult())
+        pass
 

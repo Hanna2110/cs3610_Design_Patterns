@@ -1,8 +1,10 @@
-from BuilderPunicWars.ArmyDirectorClass import ArmyDirector
-from BuilderPunicWars.CarthaginianArmyBuilderClass import CarthaginianArmyBuilder
-from BuilderPunicWars.RomanArmyBuilderClass import RomanArmyBuilder
+from BuilderAndPrototypePunicWars.ArmyDirectorClass import ArmyDirector
+from BuilderAndPrototypePunicWars.CarthaginianArmyBuilderClass import CarthaginianArmyBuilder
+from BuilderAndPrototypePunicWars.RomanArmyBuilderClass import RomanArmyBuilder
+from BuilderAndPrototypePunicWars.PrototypeStorageClass import PrototypeRegistry
 
 def PunicsWarsGame():
+    PrototypeRegistry.initialize()
     gameDirector=ArmyDirector()
     
     romanBuilder = RomanArmyBuilder()

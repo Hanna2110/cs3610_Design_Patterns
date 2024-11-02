@@ -1,4 +1,5 @@
 from BuilderAndPrototypePunicWars.WarriorArcherClass import WarriorArcher
+from BuilderAndPrototypePunicWars.WarriorHorsemanClass import WarriorHorseman
 
 class PrototypeRegistry:
     # Cache to store objects/prototypes
@@ -9,7 +10,7 @@ class PrototypeRegistry:
         PrototypeRegistry.prototypes[name] = prototype
     
     @staticmethod
-    def get_prototype( name):
+    def get_prototype(name):
         if name in PrototypeRegistry.prototypes:
             return PrototypeRegistry.prototypes[name].clone()
         else:
@@ -17,9 +18,13 @@ class PrototypeRegistry:
         
     @staticmethod
     def initialize():
-        #load MyClass1
+        #load Archer
         warrior1=WarriorArcher()
-        PrototypeRegistry.prototypes.setdefault(WarriorArcher.__name__, warrior1)        
+        PrototypeRegistry.prototypes.setdefault(WarriorArcher.__name__, warrior1)    
+        
+        #load Horseman
+        warrior2=WarriorHorseman()
+        PrototypeRegistry.prototypes.setdefault(WarriorHorseman.__name__, warrior2)     
        
         
         

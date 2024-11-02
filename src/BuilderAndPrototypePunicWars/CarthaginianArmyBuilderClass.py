@@ -1,8 +1,9 @@
-from BuilderPunicWars.IBuilderClass import IBuilber
-from BuilderPunicWars.ArmyClass import Army
-from BuilderPunicWars.WarriorArcherClass import WarriorArcher
-from BuilderPunicWars.WarriorHorsemanClass import WarriorHorseman
-from BuilderPunicWars.CombatUnit_ElephantClass import CombatUnit_Elephant
+from BuilderAndPrototypePunicWars.PrototypeStorageClass import PrototypeRegistry
+
+from BuilderAndPrototypePunicWars.IBuilderClass import IBuilber
+from BuilderAndPrototypePunicWars.ArmyClass import Army
+from BuilderAndPrototypePunicWars.WarriorArcherClass import WarriorArcher
+from BuilderAndPrototypePunicWars.WarriorHorsemanClass import WarriorHorseman
 
 class CarthaginianArmyBuilder(IBuilber):
     
@@ -19,13 +20,13 @@ class CarthaginianArmyBuilder(IBuilber):
         return currentProduct
 
     def buildArcher(self) -> None:
-        self.__product.add(WarriorArcher())
+        self.__product.add(PrototypeRegistry.get_prototype(WarriorArcher.__name__))
 
     def buildHorseman(self) -> None:
-        self.__product.add(WarriorHorseman())
+        self.__product.add(PrototypeRegistry.get_prototype(WarriorHorseman.__name__))
 
     def buildElephant(self) -> None:
-        self.__product.add(CombatUnit_Elephant())
+        pass
         
     def buildInfantryman(self) -> None:
         pass

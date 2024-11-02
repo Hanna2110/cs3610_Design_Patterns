@@ -1,5 +1,5 @@
-from BuilderPunicWars.IWarriorClass import IWarrior
-from BuilderPunicWars.ICombatUnitClass import ICombatUnit
+from BuilderAndPrototypePunicWars.IWarriorClass import IWarrior
+from BuilderAndPrototypePunicWars.ICombatUnitClass import ICombatUnit
 
 class Army:
     def __init__(self, name: str) -> None:
