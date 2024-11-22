@@ -22,6 +22,7 @@ class Army:
             print(f"The warriors of {self.__name} Army are:")
             for item in self.__warriors:
                 item.info()
+                print(id(item))
                 
         if len(self.__combatUnits)>0:
             print(f"The warriors of {self.__name} Army are:")
